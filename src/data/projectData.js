@@ -8,64 +8,58 @@ import TheSimpsons from "../assets/img-projects/TheSimpsons.png";
 
 export const proyectos = [
   {
-    titulo: "Vintage Tone",
+    titulo: "Análisis de la serie Friends",
     descripcion:
-      "Comercio electrónico completo con carrito de compras, autenticación de usuarios jwt, panel de Admin, Blog, y mas. Stack: Vue.Js - Node.js - Express - MongoDB - Tailwind - Cloudinary.",
+      "Análisis del éxito de la serie Friends, limpieza y visualización usando Power BI y DAX",
     imagen: Friends.src,
-    tecnologias: ["Vue.js", "Tailwind", "Express", "MongoDB"],
-    demo: "https://vintage-tone-front-vue.vercel.app",
-    codigo: "https://github.com/Lautaro-R-collins/VintageTone-Front-Vue.git",
-    categoria: "fullstack",
+    tecnologias: ["Power BI", "DAX"],
+    codigo: "https://github.com/elenapavonfernandez-ui/friends-PowerBI",
+    categoria: "BI",
   },
   {
-    titulo: "React Tiendita",
+    titulo: "Solar Energy proyect",
     descripcion:
-      "E-commerce full stack desarrollado con React, Node.js y MongoDB. Incluye autenticación, carrito de compras, búsqueda, categorías, reseñas, etc.",
+      "Solar energy EDA and data cleaning & visualization project. Compares the efficiency of two solar plants using Python, Pandas, Seaborn and Matplotlib",
     imagen: solarplant.src,
-    tecnologias: ["React", "Tailwind", "Express", "MongoDB"],
-    demo: "https://react-e-commerce-three-phi.vercel.app",
-    codigo: "https://github.com/Lautaro-R-collins/React-E-commerce.git",
-    categoria: "fullstack",
+    tecnologias: ["Python", "Pandas", "Seaborn", "Matplotlib"],
+    codigo: "https://github.com/elenapavonfernandez-ui/solar-energy-Python",
+    categoria: "Python",
   },
   {
-    titulo: "Astro Ecommerce",
+    titulo: "Análisis rotación",
     descripcion:
-      "E-commerce frontend desarrollado con Astro y React. Incluye carrito de compras, categorías, y diseño responsivo.",
+      "Análisis de los motivos de rotación dentro de una empresa. EDA, limpieza y visualización con Seaborn y Matplotlib",
     imagen: analisisrotacion.src,
-    tecnologias: ["React", "Astro", "Tailwind", "daisyUI"],
-    demo: "https://e-commer-astro.vercel.app",
-    codigo: "https://github.com/Lautaro-R-collins/E-commer-Astro.git",
-    categoria: "frontend",
+    tecnologias: ["Pyhon", "Seaborn", "Matplotlib", "Pandas"],
+    codigo: "https://github.com/elenapavonfernandez-ui/analisis-rotacion-Python",
+    categoria: "Python",
   },
   {
-    titulo: "App organizacion",
+    titulo: "Base de datos Sakila",
     descripcion:
-      "App full-stack con funciones CRUD, creacion de tableros y listas, autentificacion de usuarios, desarrollada con MERN stack.",
+      "Proyecto base de datos de un videoclub utilizando SQL",
     imagen: Sakila.src,
-    tecnologias: ["React", "Tailwind", "Express", "MongoDB"],
-    demo: "https://front-react-todo.onrender.com",
-    codigo: "https://github.com/Lautaro-R-collins/Front-react-todo",
-    categoria: "fullstack",
+    tecnologias: ["SQL"],
+    codigo: "https://github.com/elenapavonfernandez-ui/videoclub-sakila-SQL",
+    categoria: "SQL",
   },
   {
-    titulo: "CV Builder",
+    titulo: "Análisis Musical",
     descripcion:
-      "Generador de Currículum multi-idioma profesional siguiendo el formato recomendado por Harvard y amigable con los ATS. ",
+      "Extracción y análisis de datos musicales (2000 - 2005) con Python, SQL y APIs de Spotify y Last.fm.",
     imagen: SpotifyApi.src,
-    tecnologias: ["React", "contextAPI", "tailwind", "i18n"],
-    demo: "https://cv-builder-pi-three.vercel.app",
-    codigo: "https://github.com/Lautaro-R-collins/CV-Builder.git",
-    categoria: "frontend",
+    tecnologias: ["Python", "SQL", "Apis"],
+    codigo: "https://github.com/elenapavonfernandez-ui/analisis-musical-APIs-spotify-lastfm",
+    categoria: "SQL","Python"
   },
   {
-    titulo: "E-commerce Urban Style",
+    titulo: "Análisis The Simpsons ",
     descripcion:
-      "E-commerce funcional de ropa y accesorios, con carrito de compras categorias y pasarela de pago desarrollado en React.",
+      "Análisis éxito de la serie The Simpons realizando un EDA en python y visualización en Tableau",
     imagen: TheSimpsons.src,
-    tecnologias: ["React", "Tailwind", "Firebase"],
-    demo: "https://proyecto-final-rodriguez-sable.vercel.app/",
-    codigo: "https://github.com/Lautaro-R-collins/ProyectoFinal-Rodriguez.git",
-    categoria: "fullstack",
+    tecnologias: ["Python", "Tableau"],
+    codigo: "https://github.com/elenapavonfernandez-ui/los-simpson-Tableau",
+    categoria: "Python", "Tableau"
   },
 
 ];
