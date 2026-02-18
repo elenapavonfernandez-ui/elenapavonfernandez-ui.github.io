@@ -50,7 +50,7 @@ export const proyectos = [
     imagen: SpotifyApi.src,
     tecnologias: ["Python", "SQL", "Apis"],
     codigo: "https://github.com/elenapavonfernandez-ui/analisis-musical-APIs-spotify-lastfm",
-    categoria: "SQL","Python"
+    categoria: "SQL","Python",
   },
   {
     titulo: "Análisis The Simpsons ",
@@ -59,7 +59,7 @@ export const proyectos = [
     imagen: TheSimpsons.src,
     tecnologias: ["Python", "Tableau"],
     codigo: "https://github.com/elenapavonfernandez-ui/los-simpson-Tableau",
-    categoria: "Python", "Tableau"
+    categoria: "Python", "Tableau",
   },
 
 ];
