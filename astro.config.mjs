@@ -1,26 +1,19 @@
 // @ts-check
-import {defineConfig} from 'astro/config';
-import mdx from "@astrojs/mdx";
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
-import icon from "astro-icon";
-import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://elenapavonfernandez-ui.github.io/',
-    base: '/', 
-    integrations: [mdx(), react(), tailwind({
-        applyBaseStyles: false,
-    }), icon(), sitemap()],
-    markdown: {
-        shikiConfig: {
-            theme: 'plastic',
-            wrap: true,
-        },
-    },
-    experimental: {
-        svg: true,
-    }
-});
+  // 1. La URL de tu sitio (Indispensable para que funcionen los enlaces)
+  site: 'https://elenapavonfernandez-ui.github.io',
+  
+  // 2. La ruta base (Al ser elenapavonfernandez-ui.github.io, usamos la raíz)
+  base: '/', 
 
+  vite: {
+    plugins: [tailwindcss()],
+  },
+
+  integrations: [react()],
+});
