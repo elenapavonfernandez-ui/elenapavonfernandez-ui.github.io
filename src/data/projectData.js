@@ -1,4 +1,4 @@
-import imgNote from "../assets/img-projects/note-app.png";
+import solarplant from "../assets/img-projects/solarplant.png";
 import urbanStyle from "../assets/img-projects/urbanStyle.png";
 import legalWeb from "../assets/img-projects/legalweb.webp";
 import mediCare from "../assets/img-projects/medicare.jpg";
@@ -22,14 +22,13 @@ export const proyectos = [
     categoria: "fullstack",
   },
   {
-    titulo: "React Tiendita",
+    titulo: "Solar Energy Generation Analysis",
     descripcion:
-      "E-commerce full stack desarrollado con React, Node.js y MongoDB. Incluye autenticación, carrito de compras, búsqueda, categorías, reseñas, etc.",
-    imagen: ReactEcommerce.src,
-    tecnologias: ["React", "Tailwind", "Express", "MongoDB"],
-    demo: "https://react-e-commerce-three-phi.vercel.app",
-    codigo: "https://github.com/Lautaro-R-collins/React-E-commerce.git",
-    categoria: "fullstack",
+      "Solar energy EDA and data cleaning & visualization project. Compares the efficiency of two solar plants.",
+    imagen: solarplant.src,
+    tecnologias: ["Python", "Pandas", "Seaborn", "Matplotlib"],
+    codigo: "https://github.com/elenapavonfernandez-ui/solar-energy-Python",
+    categoria: "EDA / Exploratory Data Analysis:",
   },
   {
     titulo: "Astro Ecommerce",
