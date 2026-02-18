@@ -1,34 +1,27 @@
 export const jobs = [
   {
-    title: "Frontend Developer - Neowyze",
-    time: ["12/2024 - 05/2025"],
+    title: "Digital Marketing Specialist - Zexel",
+    time: ["02/2024 - 02/2026"],
     description:
-      "Mis tareas en Neowyze consisten en desarrollar webs responsivas basadas en diseños proporcionados en Figma, utilizando Astro, React, Tailwind y otras librerías frontend.",
+      "Análisis de métricas clave y optimización de estrategias basadas en datos en un entorno startup del sector tech.",
     list: [
-      "Para el flujo de trabajo, utilizo Jira como herramienta de gestión y Git/GitHub como sistema de control de versiones.",
-      "Trabajo bajo la metodología ágil Scrum, con sprints de 2 semanas y dos reuniones diarias (dailies) para planificar el proyecto y presentar avances",
+      "Definición y seguimiento de KPIs (CTR, alcance, engagement) alineados con los objetivos de negocio.",
+      "Creación de dashboards para el seguimiento continuo de resultados y optimización mediante pruebas A/B.",
+      "Comunicación con el equipo técnico para alinear acciones, contribuyendo a una estrategia de datos que apoyó el cierre de 1M € de inversión.",
     ],
   },
   {
-    title: "Frontend Developer - Vegna",
-    time: ["05/2024 - 02/2024"],
-    description: "Desarrollo y mantenimiento de interfaces de usuario con:",
-    list: ["JavaScript - TypeScript", "React - Next.js", "Tailwind", "Shadcn"],
+    title: "Data Analytics Bootcamp - Adalab",
+    time: ["09/2025 - 01/2026"],
+    description: "Formación intensiva en análisis de datos, con enfoque práctico en proyectos reales con:",
+    list: ["Python - SQL", "Power BI - Tableau"],
   },
   {
-    title: "Frontend Developer - Igrowker",
-    time: ["07/2022 - 08/2022"],
-    description: "Desarrollo y mantenimiento de interfaces de usuario con",
-    list: ["React - React Router - Context api - CSS - Material UI"],
-  },
-  {
-    title: " Web Developer - NoCountry",
-    time: ["03/2022 - 06/2022"],
-    description:
-      "Desarrollo de aplicaciones web responsivas MVP fullstack usando para su desarrollo tecnologías como",
-    list: [
-      "Frontend : React - React Router - Context api - tailwindcss",
-      "Backend : API REST con Express.js, MongoDB",
+    title: "Background en Comunicación y Operaciones",
+    time: ["2016 - 2023"],
+    description: "Experiencia previa en roles que desarrollaron mis habilidades analíticas y de comunicación:",
+    list: ["Producción audiovisual e informativos (Onda Cero, Telecinco): Análisis, verificación y comunicación de información, asegurando la calidad de los datos.",
+      "Logística y atención al cliente (Decathlon): Trabajo en entornos operativos exigentes, desarrollando atención al detalle y proactividad."
     ],
   },
 ];
