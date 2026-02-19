@@ -38,19 +38,19 @@ const SkillsList = () => {
 
   const skills = {
     "¿Qué tecnologías uso?": [
-      "Actualmente trabajo con tecnologías como React, Next.js, Vue.js, Astro, tailwind, Boostrap y demas librerias y frameworks para el frontend y en el backend trabajo con Node.js, Express, MongoDB, Firebase, entre otras.",
+      "Actualmente trabajo con tecnologías como Python, SQL, Power BI, Tableau, Excel y utilizando librerías como Pandas, Seaborn, Matplotlib o Numpy entre otras.",
     ],
     "Mi Experiencia": [
-      "Tengo experiencia trabajando en startups y consultoras tecnológicas, desarrollando y maquetando sitios web a partir de diseños en Figma. Para ello, utilizo tecnologías frontend como Astro y React, junto con Tailwind CSS y otras librerías y frameworks para el estilizado y la optimización de interfaces.",
+      "Tengo experiencia trabajando en startups y en equipos multidisciplinares, recopilando y extrayendo datos y analizándonos para tomar decisiones estratégicas.",
     ],
     "Mi formacion": [
-      "Estudié una tecnicatura en automatización de grado universitaria en el ITU, lo que me brindó las bases en programación. Posteriormente, decidí enfocarme en el desarrollo web y de software. Ademas, realicé diversos cursos, diplomados y capacitaciones en grandes universidades Argentinas, como la UTN, tambien, complemento mi formación con el aprendizaje autodidacta, lo que me permite mantenerme actualizado con los avances tecnológicos en el desarrollo de software.",
+      "Graduada en Periodismo y técnico superior en realización audiovisual. Posteriormente, me he especializado como Data Analyst mediante un bootcamp intensivo de Data Analytics & IA de 638 horas. Además, cuento con diversos cursos y capacitaciones en el ámbito del Marketing Digital y las nuevas tecnologías. Tambien, complemento mi formación aprendizaje autodidacta para seguir siempre a la vanguardia de las novedades tecnológicas.",
     ],
     "¿Cómo trabajo en equipo?": [
-      "Tengo experiencia trabajando en equipos multidisciplinarios, donde me he encargado del desarrollo frontend de aplicaciones web. Para ello, utilizo metodologías ágiles como Scrum y Kanban, además de herramientas de control de versiones como Git y GitHub para gestionar el flujo de trabajo. También cuento con experiencia en el uso de herramientas de gestión de proyectos como Trello y Jira, facilitando la organización y colaboración dentro del equipo.",
+      "Tengo experiencia trabajando en equipos multidisciplinarios, donde he trabajado codo con codo con equipos técnicos y no técnicos. Para ello, utilizo metodologías ágiles como Scrum, además de herramientas de control de versiones como Git y GitHub para gestionar el flujo de trabajo. También cuento con experiencia en el uso de herramientas de gestión de proyectos como Notion y herramientas de gestión documental y colaborativas como Sharepoint.",
     ],
     "Metodolgias Agiles": [
-      "He trabajado con metodologías ágiles como Scrum y Kanban. En Scrum, participé en sprints de dos semanas, donde al finalizar cada sprint realizaba un pull request (PR) con mi trabajo, el cual pasaba por una fase de revisión y corrección antes de ser fusionado y enviado a producción. También he trabajado con Kanban, utilizando tableros para gestionar tareas y moverlas según su estado de progreso. Además, participé en reuniones diarias (dailies) para planificar y reportar avances del proyecto, asegurando una comunicación eficiente dentro del equipo.",
+      "He trabajado con metodologías ágiles como Scrum. En Scrum, participé en sprints de semanales, donde al finalizar cada sprint realizaba una presentación de mi trabajo semanal a todo el equipo. También he trabajado con Microsoft Planner (diseño tipo Kanban), utilizando tableros para gestionar tareas y moverlas según su estado de progreso. Además, participé en reuniones departamenales de apertura y cierre de semana para establecer KPIs y revisar el cumplimiento de las mismas, asegurando una comunicación eficiente dentro del equipo.",
     ],
   };
 
