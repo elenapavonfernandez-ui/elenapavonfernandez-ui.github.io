@@ -11,7 +11,7 @@ export default function NotificationBell() {
     { id: 1, text: "Nuevo proyecto publicado 🚀", read: false },
     {
       id: 2,
-      text: "Hey como va?, te comento que actualmente estoy aprendiendo desarrollo móvil con React Native",
+      text: "Hey como va?, te comento que actualmente estoy formándome en sistemas Cloud",
       read: false,
     },
   ];
@@ -88,10 +88,10 @@ export default function NotificationBell() {
       </button>
 
       {open && (
-        <div className="absolute right-0 z-50 mt-2 w-70 max-w-sm rounded-lg border-none bg-gray-900 shadow-lg drop-shadow-[4px_4px_0_#7836cf]">
+        <div className="absolute right-0 z-50 mt-2 w-70 max-w-sm rounded-lg border-none bg-gray-900 shadow-lg drop-shadow-[4px_4px_0_#B900BC]">
           <div className="p-3">
             <div className="mb-2 flex items-center justify-between">
-              <h4 className="text-xm font-bold text-gray-200 drop-shadow-[1px_1px_0_#7836cf]">
+              <h4 className="text-xm font-bold text-gray-200 drop-shadow-[1px_1px_0_#B900BC]">
                 Notificaciones
               </h4>
             </div>
