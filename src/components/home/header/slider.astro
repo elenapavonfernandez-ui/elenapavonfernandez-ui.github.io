@@ -2,13 +2,13 @@
 const technologies = [
   { name: "Python", file: "python.svg" },
   { name: "MySQL", file: "mysql.svg" },
-  { name: "Power BI", file: "powerBI.svg" }, // Ojo a la BI mayúscula
-  { name: "Tableau", file: "Tableau-Logo.svg" }, // Tal cual lo escribiste
+  { name: "Power BI", file: "powerBI.svg" },
+  { name: "Tableau", file: "Tableau-Logo.svg" },
   { name: "Excel", file: "excel.svg" },
   { name: "Pandas", file: "pandas.svg" },
-  { name: "NumPy", file: "numpy-logo.svg" }, // Con el -logo
+  { name: "NumPy", file: "numpy-logo.svg" },
   { name: "Git", file: "git.svg" },
-  { name: "GitHub", file: "github.png" }, // Este es el único .png
+  { name: "GitHub", file: "github.png" }, // Único PNG
   { name: "Selenium", file: "selenium.svg" },
   { name: "Beautiful Soup", file: "beautifulsoup.svg" },
   { name: "WordPress", file: "wordpress.svg" },
@@ -23,11 +23,11 @@ const technologies = [
       [...technologies, ...technologies, ...technologies].map((tech) => (
         <div class="group flex items-center gap-2 transition-all duration-300">
           <img
-            src={`/svg/${tech.file}`}
-            alt=""
+            src={`/svg/${tech.file}`} 
+            alt={tech.name}
             class="h-8 w-auto object-contain transition-transform group-hover:scale-110"
-            /* Si no encuentra la imagen, muestra un icono genérico de "datos" para que no quede vacío */
-            onerror="this.onerror=null; this.src='https://www.svgrepo.com/show/510925/data.svg'; this.style.opacity='0.5';"
+            /* Si la ruta sigue mal, esto te avisará en la consola del navegador */
+            onerror={`console.warn('Error cargando: /svg/${tech.file}')`}
             width="32"
             height="32"
             loading="lazy"
