@@ -1,19 +1,19 @@
 ---
 const technologies = [
-  "python",
-  "mysql",
-  "powerbi",
-  "tableau",
-  "excel",
-  "pandas",
-  "numpy",
-  "git",
-  "github",
-  "selenium",
-  "beautifulsoup",
-  "wordpress",
-  "vscode",
-  "bash"
+  { id: "python", name: "Python", file: "python.svg" },
+  { id: "mysql", name: "MySQL", file: "mysql.svg" },
+  { id: "powerbi", name: "Power BI", file: "powerBI.svg" },
+  { id: "tableau", name: "Tableau", file: "Tableau-Logo.svg" }, // Ajustado al nombre que dijiste
+  { id: "excel", name: "Excel", file: "excel.svg" },
+  { id: "pandas", name: "Pandas", file: "pandas.svg" },
+  { id: "numpy", name: "NumPy", file: "numpy-logo.svg" }, // Ajustado al nombre que dijiste
+  { id: "git", name: "Git", file: "git.svg" },
+  { id: "github", name: "GitHub", file: "github.png" }, // Ajustado a .png
+  { id: "selenium", name: "Selenium", file: "selenium.svg" },
+  { id: "beautifulsoup", name: "Beautiful Soup", file: "beautifulsoup.svg" },
+  { id: "wordpress", name: "WordPress", file: "wordpress.svg" },
+  { id: "vscode", name: "VS Code", file: "vscode.svg" },
+  { id: "bash", name: "Bash", file: "bash.svg" }
 ];
 ---
 
@@ -23,20 +23,16 @@ const technologies = [
       [...technologies, ...technologies, ...technologies].map((tech) => (
         <div class="group flex items-center gap-2 transition-all duration-300">
           <img
-            src={`/svg/${tech}.svg`}
-            alt={tech}
+            src={`/svg/${tech.file}`}
+            alt={tech.name}
             class="h-8 w-auto object-contain transition-transform group-hover:scale-110"
             width="32"
             height="32"
             loading="lazy"
+            onerror="this.style.opacity='0'" 
           />
-          <span class="text-lg font-medium text-white">
-            {/* Lógica personalizada para nombres compuestos o siglas */}
-            {tech === "powerbi" ? "Power BI" :
-             tech === "beautifulsoup" ? "Beautiful Soup" :
-             tech === "vscode" ? "VS Code" :
-             ["mysql", "git", "bash"].includes(tech) ? tech.toUpperCase() :
-             tech.charAt(0).toUpperCase() + tech.slice(1)}
+          <span class="text-lg font-medium text-white whitespace-nowrap">
+            {tech.name}
           </span>
         </div>
       ))
@@ -46,24 +42,18 @@ const technologies = [
 
 <style is:global>
   @keyframes scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-33.33%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(-33.33%); }
   }
   .animate-scroll {
-    animation: scroll 35s linear infinite;
+    animation: scroll 40s linear infinite;
   }
-
   .hover\:animate-paused:hover {
     animation-play-state: paused;
   }
-
   @media (min-width: 768px) {
     .animate-scroll {
-      animation-duration: 45s;
+      animation-duration: 50s;
     }
   }
 </style>
