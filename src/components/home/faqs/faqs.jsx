@@ -28,16 +28,16 @@ const SkillsList = () => {
 
   const skills = {
     "¿Qué tecnologías uso?": [
-      "Me especializo en el análisis y visualización de datos utilizando Python como lenguaje principal, apoyándome en librerías como Pandas, NumPy y Matplotlib. Para la gestión de bases de datos utilizo SQL (MySQL) y para la creación de dashboards dinámicos trabajo con herramientas de Business Intelligence como Tableau y Excel avanzado.",
+      "Me especializo en el análisis y visualización de datos utilizando Python como lenguaje principal, apoyándome en librerías como Pandas, NumPy y Matplotlib. Para la gestión de bases de datos utilizo SQL (MySQL) y para la creación de dashboards dinámicos trabajo con herramientas de Business Intelligence como Tableau y Power BI.",
     ],
     "Mi formación": [
-      "Estudié una tecnicatura en automatización de grado universitaria en el ITU, lo que me brindó las bases sólidas en lógica y programación. Posteriormente, decidí enfocarme en el análisis de datos, complementando mi formación con cursos y diplomados en universidades como la UTN y aprendizaje autodidacta para mantenerme al día con las últimas herramientas de BI.",
+      "Vengo del mundo de la comunicación, pero mi curiosidad por entender el 'porqué' de las cosas me llevó a los datos. Soy graduada en Periodismo —con una etapa increíble en Francia (Audencia Science Com)— y técnica en Audiovisual, lo que me dio una base muy sólida para analizar información y contar historias. Decidí dar el salto técnico con un bootcamp de 638 horas de Data Analytics, donde me sumergí de lleno en Python, SQL y visualización. Hoy, uso esa mezcla para que los datos no sean solo números fríos, sino respuestas claras que ayuden a tomar mejores decisiones",
     ],
     "Mi Enfoque": [
       "Mi trabajo se centra en transformar datos complejos en narrativas visuales comprensibles. Creo firmemente que los datos solo son útiles cuando pueden contar una historia que facilite la toma de decisiones estratégicas. Por ello, cuido tanto el rigor del análisis como la claridad estética de la visualización.",
     ],
     "Metodologías ágiles": [
-      "Tengo experiencia trabajando en equipos multidisciplinarios bajo metodologías ágiles como Scrum y Kanban. Utilizo herramientas de control de versiones como Git y GitHub para gestionar mis scripts de análisis, además de plataformas como Trello o Jira para asegurar una comunicación fluida y una entrega de resultados organizada.",
+      "Tengo experiencia trabajando en equipos multidisciplinarios bajo metodologías ágiles como Scrum y Kanban. Utilizo herramientas de control de versiones como Git y GitHub para gestionar mis scripts de análisis, además de plataformas como Notion para asegurar una comunicación fluida y una entrega de resultados organizada.",
     ],
   };
 
