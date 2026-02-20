@@ -6,7 +6,7 @@ const CategoryIcons = {
       <path d="M5 3H19C20.1046 3 21 3.89543 21 5V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3ZM5 5V19H19V5H5ZM7 7H11V11H7V7ZM13 7H17V9H13V7ZM13 10H17V12H13V10ZM7 13H11V17H7V13ZM13 13H17V15H13V13ZM13 16H17V17H13V16Z"></path>
     </svg>
   ),
-  "Mi Formación": (
+  "Mi formación": (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-[#00FFAB] h-6 w-6 opacity-80">
       <path d="M12 2L2 7L12 12L22 7L12 2ZM2 12L12 17L22 12V14.5L12 19.5L2 14.5V12ZM12 14.5L12 14.5L12 14.5L12 14.5Z"></path>
     </svg>
@@ -16,7 +16,7 @@ const CategoryIcons = {
       <path d="M13 21V11H21V21H13ZM3 13V3H11V13H3ZM13 9V3H21V9H13ZM3 21V15H11V21H3Z"></path>
     </svg>
   ),
-  "Metodologías de trabajo": (
+  "Metodologías ágiles": (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="text-[#00FFAB] h-6 w-6 opacity-80">
       <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H13V17H11V14H7V12H11V9H13V12Z"></path>
     </svg>
@@ -30,10 +30,73 @@ const SkillsList = () => {
     "¿Qué tecnologías uso?": [
       "Me especializo en el análisis y visualización de datos utilizando Python como lenguaje principal, apoyándome en librerías como Pandas, NumPy y Matplotlib. Para la gestión de bases de datos utilizo SQL (MySQL) y para la creación de dashboards dinámicos trabajo con herramientas de Business Intelligence como Tableau y Excel avanzado.",
     ],
-    "Mi Formación": [
-      "Mi base técnica proviene del aprendizaje constante en análisis de datos y herramientas estadísticas. He complementado mi perfil con formación específica en herramientas de visualización y manipulación de grandes volúmenes de datos, lo que me permite extraer insights de valor y presentarlos de forma clara y estratégica.",
+    "Mi formación": [
+      "Estudié una tecnicatura en automatización de grado universitaria en el ITU, lo que me brindó las bases sólidas en lógica y programación. Posteriormente, decidí enfocarme en el análisis de datos, complementando mi formación con cursos y diplomados en universidades como la UTN y aprendizaje autodidacta para mantenerme al día con las últimas herramientas de BI.",
     ],
     "Mi Enfoque": [
-      "Mi trabajo se centra en transformar datos complejos en narrativas visuales comprensibles. Creo firmemente que los datos solo son útiles cuando pueden contar una historia que facilite la toma de decisiones. Por ello, cuido tanto el rigor del análisis como la claridad estética de la visualización.",
+      "Mi trabajo se centra en transformar datos complejos en narrativas visuales comprensibles. Creo firmemente que los datos solo son útiles cuando pueden contar una historia que facilite la toma de decisiones estratégicas. Por ello, cuido tanto el rigor del análisis como la claridad estética de la visualización.",
     ],
-    "
+    "Metodologías ágiles": [
+      "Tengo experiencia trabajando en equipos multidisciplinarios bajo metodologías ágiles como Scrum y Kanban. Utilizo herramientas de control de versiones como Git y GitHub para gestionar mis scripts de análisis, además de plataformas como Trello o Jira para asegurar una comunicación fluida y una entrega de resultados organizada.",
+    ],
+  };
+
+  const toggleItem = (item) => {
+    setOpenItem(openItem === item ? null : item);
+  };
+
+  return (
+    <div className="flex flex-col items-center px-4 text-left py-10">
+      <div className="mx-auto w-full max-w-4xl">
+        <h2 className="text-white text-center text-4xl font-bold drop-shadow-[2px_2px_0_#B900BC]">
+          Sobre mí y mi trabajo
+        </h2>
+        <ul className="mt-8 space-y-4 text-lg">
+          {Object.entries(skills).map(([category, items]) => (
+            <li key={category} className="w-full">
+              <div
+                onClick={() => toggleItem(category)}
+                className="bg-gray-900 border border-white/5 hover:border-[#00FFAB]/30 w-full cursor-pointer overflow-hidden rounded-2xl text-left transition-all"
+              >
+                <div className="flex items-center gap-3 p-4">
+                  {CategoryIcons[category] || null}
+                  <div className="flex grow items-center justify-between gap-2">
+                    <div className="max-w-[250px] min-w-0 overflow-hidden md:max-w-none">
+                      <span className="block truncate text-lg text-white font-bold drop-shadow-[1px_1px_0_#B900BC]">
+                        {category}
+                      </span>
+                    </div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className={`h-6 w-6 shrink-0 transform text-[#00FFAB] transition-transform duration-300 ${
+                        openItem === category ? "rotate-180" : ""
+                      }`}
+                    >
+                      <path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div
+                  className={`px-4 transition-all duration-300 ease-in-out ${
+                    openItem === category
+                      ? "max-h-[500px] pb-5 opacity-100"
+                      : "max-h-0 opacity-0 overflow-hidden"
+                  }`}
+                >
+                  <p className="text-[0.9em] text-gray-300 font-medium leading-relaxed border-l-2 border-[#00FFAB] pl-4">
+                    {items[0]}
+                  </p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default SkillsList;
