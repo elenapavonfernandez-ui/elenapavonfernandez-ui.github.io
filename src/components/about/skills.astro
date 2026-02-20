@@ -16,14 +16,15 @@
         { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
         { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
         { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-        { name: "Tableau", icon: "https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" },
-        { name: "Power BI", icon: "https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" },
-        { name: "Excel", icon: "https://www.vectorlogo.zone/logos/microsoft_excel/microsoft_excel-icon.svg" },
+        // Iconos alternativos muy estables para los que fallan:
+        { name: "Tableau", icon: "https://www.svgrepo.com/show/354425/tableau-icon.svg" },
+        { name: "Power BI", icon: "https://www.svgrepo.com/show/354433/power-bi-icon.svg" },
+        { name: "Excel", icon: "https://www.svgrepo.com/show/373778/excel.svg" },
         { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
         { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
         { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-        { name: "BeautifulSoup", icon: "https://www.svgrepo.com/show/501377/web-code.svg" },
+        { name: "BeautifulSoup", icon: "https://www.svgrepo.com/show/506331/spider.svg" }, 
       ].map((skill) => (
         <div class="relative group">
           <div class="absolute inset-0 -z-10 rounded-lg blur-3xl opacity-0 transition-opacity group-hover:opacity-100" />
@@ -33,6 +34,7 @@
               src={skill.icon}
               alt={skill.name}
               class={`w-12 h-12 object-contain ${skill.name === 'GitHub' ? 'invert brightness-200' : ''}`}
+              loading="lazy"
             />
             <p class="mt-2 text-white text-lg font-semibold drop-shadow-[1px_1px_0_#B900BC]">{skill.name}</p>
           </div>
