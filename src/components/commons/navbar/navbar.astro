@@ -23,9 +23,9 @@ const links = [
       <!-- Logo -->
       <a href="/" class="flex items-center">
         <h3
-          class="text-[#69c7c7] text-3xl font-bold drop-shadow-[1.5px_1.5px_0_#7836cf]"
+          class="text-[#00ffab] text-3xl font-bold drop-shadow-[1.5px_1.5px_0_#b900bc]"
         >
-          LRC
+          EPF
         </h3>
       </a>
 
@@ -36,7 +36,7 @@ const links = [
             <li>
               <a
                 href={link.href}
-                class="nav-link font-bold transition-colors duration-300 text-white hover:text-[#7d2dac]"
+                class="nav-link font-bold transition-colors duration-300 text-white hover:text-[#b900bc]"
               >
                 {link.name}
               </a>
@@ -48,23 +48,23 @@ const links = [
           <NotificationBell client:visible />
 
           <a
-            href="https://www.linkedin.com/in/lautaro-rodr%C3%ADguez-collins-40505624a/"
+            href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
             <FaLinkedinIn
-              className="h-7 w-7 cursor-pointer hover:text-[#7836cf]"
+              className="h-7 w-7 cursor-pointer hover:text-[#c800cc]"
             />
           </a>
 
           <a
-            href="https://github.com/Lautaro-R-collins"
+            href="https://github.com/elenapavonfernandez-ui"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <FaGithub className="h-7 w-7 cursor-pointer hover:text-[#7836cf]" />
+            <FaGithub className="h-7 w-7 cursor-pointer hover:text-[#c800cc]" />
           </a>
         </li>
       </ul>
@@ -102,7 +102,7 @@ const links = [
           <li>
             <a
               href={link.href}
-              class="nav-link-mobile text-lg font-bold text-white hover:text-[#69c7c7] transition-colors duration-300"
+              class="nav-link-mobile text-lg font-bold text-white hover:text-[#00ffab] transition-colors duration-300"
             >
               {link.name}
             </a>
@@ -131,11 +131,11 @@ const links = [
         const href = hrefAttr?.replace(/\/$/, "") || "" || "/";
 
         if (href === currentPath) {
-          link.classList.add("text-[#7d2dac]", "font-extrabold");
+          link.classList.add("text-[#c800cc]", "font-extrabold");
           link.classList.remove("text-white");
         } else {
-          link.classList.remove("text-[#7d2dac]", "font-extrabold");
-          if (!link.classList.contains("hover:text-[#7d2dac]")) {
+          link.classList.remove("text-[#c800cc]", "font-extrabold");
+          if (!link.classList.contains("hover:text-[#c800cc]")) {
             link.classList.add("text-white");
           }
         }
