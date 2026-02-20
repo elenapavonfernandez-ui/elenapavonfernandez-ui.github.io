@@ -1,35 +1,42 @@
 ---
 const technologies = [
-  "astro",
-  "react",
-  "typeScript",
-  "tailwindcss",
-  "nodejs",
-  "HTML5",
-  "CSS3",
-  "javaScript",
-  "git",
-  "supabase",
+  "python",
   "mysql",
-  "bash",
+  "powerbi",
+  "tableau",
+  "excel",
+  "pandas",
+  "numpy",
+  "git",
+  "github",
+  "selenium",
+  "beautifulsoup",
+  "wordpress",
+  "vscode",
+  "bash"
 ];
 ---
 
 <div class="relative overflow-x-hidden px-8 py-8">
   <div class="animate-scroll hover:animate-paused flex w-max gap-12 md:gap-20">
     {
-      technologies.concat(technologies, technologies).map((tech) => (
+      [...technologies, ...technologies, ...technologies].map((tech) => (
         <div class="group flex items-center gap-2 transition-all duration-300">
           <img
             src={`/svg/${tech}.svg`}
             alt={tech}
-            class="h-7 w-auto object-contain  transition-transform group-hover:scale-110"
-            width="30"
-            height="30"
+            class="h-8 w-auto object-contain transition-transform group-hover:scale-110"
+            width="32"
+            height="32"
             loading="lazy"
           />
           <span class="text-lg font-medium text-white">
-            {tech.charAt(0).toUpperCase() + tech.slice(1)}
+            {/* Lógica personalizada para nombres compuestos o siglas */}
+            {tech === "powerbi" ? "Power BI" :
+             tech === "beautifulsoup" ? "Beautiful Soup" :
+             tech === "vscode" ? "VS Code" :
+             ["mysql", "git", "bash"].includes(tech) ? tech.toUpperCase() :
+             tech.charAt(0).toUpperCase() + tech.slice(1)}
           </span>
         </div>
       ))
@@ -43,16 +50,20 @@ const technologies = [
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translateX(-33.33%);
     }
   }
   .animate-scroll {
-    animation: scroll 60s linear infinite;
+    animation: scroll 35s linear infinite;
+  }
+
+  .hover\:animate-paused:hover {
+    animation-play-state: paused;
   }
 
   @media (min-width: 768px) {
     .animate-scroll {
-      animation-duration: 80s;
+      animation-duration: 45s;
     }
   }
 </style>
