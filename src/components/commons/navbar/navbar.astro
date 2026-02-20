@@ -1,11 +1,23 @@
 ---
-// ... (mantenemos los mismos imports)
+import { FiMenu, FiX } from "react-icons/fi";
+import NotificationBell from "./notificationBell.jsx";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
+
+// Definición de enlaces (Crucial para evitar el error 'links is not defined')
+const links = [
+  { name: "Inicio", href: "/" },
+  { name: "Proyectos", href: "/proyectos" },
+  { name: "Sobre Mi", href: "/about" },
+  { name: "Contacto", href: "/contact" },
+];
 ---
 
 <nav class="relative">
   <input id="menu-toggle" type="checkbox" class="peer hidden md:hidden" />
 
-  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-950/20 backdrop-blur-md border-b border-white/10">
+  <nav
+    class="fixed top-0 left-0 w-full z-50 bg-gray-950/20 backdrop-blur-md border-b border-white/10"
+  >
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       
       <a href="/" class="flex items-center">
@@ -31,27 +43,26 @@
         }
 
         <li class="flex items-center gap-4">
-          <div class="relative">
-            <NotificationBell client:visible color="#00FFAB" dotColor="#B900BC" />
-          </div>
+          <NotificationBell client:visible />
 
-          <a href="https://linkedin.com..." class="text-white hover:text-[#b900bc] transition-colors">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white hover:text-[#b900bc] transition-colors"
+          >
             <FaLinkedinIn className="h-6 w-6" />
           </a>
-          <a href="https://github.com..." class="text-white hover:text-[#b900bc] transition-colors">
+
+          <a
+            href="https://github.com/elenapavonfernandez-ui"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white hover:text-[#b900bc] transition-colors"
+          >
             <FaGithub className="h-6 w-6" />
           </a>
         </li>
       </ul>
 
-      <div class="flex md:hidden items-center gap-4 z-50">
-        <NotificationBell client:visible color="#00FFAB" dotColor="#B900BC" />
-        <label for="menu-toggle" class="cursor-pointer">
-          <FiMenu className="h-7 w-7 text-white peer-checked:hidden" />
-          <FiX className="h-7 w-7 text-white hidden peer-checked:block" />
-        </label>
-      </div>
-    </div>
-  </nav>
-  
-  </nav>
+      <div class="flex md:hidden items-center gap-4 z-50
