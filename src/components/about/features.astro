@@ -1,32 +1,32 @@
 ---
 import ServiceCard from "./ServiceCard.astro";
-import { FaLaptopCode, FaBolt, FaRocket } from "react-icons/fa"; 
+import { FaDatabase, FaSearch, FaChartPie } from "react-icons/fa"; 
 ---
 
 <section class="site-container mt-14 mx-auto max-w-6xl px-4">
 	<h2
 		class="text-4xl font-bold flex flex-col items-center gap-6 text-center whitespace-nowrap text-white md:flex-row md:items-center md:text-end"
 	>
-		<span class="hidden h-1.5 grow rounded-lg drop-shadow-[2px_2px_0_#0debd8] bg-[#7836cf] md:block"></span>
-		<span class="drop-shadow-[2px_2px_0_#7836cf]">Servicios</span>
+		<span class="hidden h-1.5 grow rounded-lg drop-shadow-[2px_2px_0_#00FFAB] bg-[#B900BC] md:block"></span>
+		<span class="drop-shadow-[2px_2px_0_#B900BC]">Servicios</span>
 	</h2>
 
 	<div class="mt-10 grid gap-6 md:grid-cols-3">
 		<ServiceCard
-			icon={FaLaptopCode}
-			title="Desarrollo Web Responsivo"
-			description="Construcción de sitios web modernos, adaptados a dispositivos móviles, optimizados y con tecnologías actuales."
+			icon={FaDatabase}
+			title="Procesamiento de Datos (ETL)"
+			description="Diseño flujos para extraer, transformar y cargar datos desde diversas fuentes como APIs, SQL o Web Scraping, asegurando información limpia y estructurada."
 		/>
 		<ServiceCard
-			icon={FaBolt}
-			title="Frontend"
-			description="Desarrollo de interfaces modernas, rápidas y accesibles que ofrecen una experiencia de usuario intuitiva y atractiva."
+			icon={FaSearch}
+			title="Análisis Exploratorio (EDA)"
+			description="Investigo conjuntos de datos con Python para descubrir patrones y anomalías, transformando el ruido inicial en hallazgos estadísticos estratégicos."
 		/>
 
 		<ServiceCard
-			icon={FaRocket}
-			title="Backend"
-			description="Rendimiento rápido, mejores prácticas de accesibilidad y optimización de procesos en el servidor."
+			icon={FaChartPie}
+			title="Business Intelligence"
+			description="Traduzco métricas complejas en historias visuales claras mediante dashboards interactivos en Tableau o Power BI para facilitar la toma de decisiones."
 		/>
 	</div>
 </section>
