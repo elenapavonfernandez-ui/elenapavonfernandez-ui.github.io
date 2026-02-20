@@ -12,19 +12,18 @@
   <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
     {
       [
-        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
-        { name: "NumPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-        { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-        // Iconos alternativos muy estables para los que fallan:
-        { name: "Tableau", icon: "https://www.svgrepo.com/show/354425/tableau-icon.svg" },
-        { name: "Power BI", icon: "https://www.svgrepo.com/show/354433/power-bi-icon.svg" },
-        { name: "Excel", icon: "https://www.svgrepo.com/show/373778/excel.svg" },
-        { name: "Selenium", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" },
-        { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-        { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-        { name: "BeautifulSoup", icon: "https://www.svgrepo.com/show/506331/spider.svg" }, 
+        { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+        { name: "Pandas", icon: "https://cdn.simpleicons.org/pandas/150458" },
+        { name: "NumPy", icon: "https://cdn.simpleicons.org/numpy/013243" },
+        { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
+        { name: "Tableau", icon: "https://cdn.simpleicons.org/tableau/E97628" },
+        { name: "Power BI", icon: "https://cdn.simpleicons.org/powerbi/F2C811" },
+        { name: "Excel", icon: "https://cdn.simpleicons.org/microsoftexcel/217346" },
+        { name: "Selenium", icon: "https://cdn.simpleicons.org/selenium/43B02A" },
+        { name: "Git", icon: "https://cdn.simpleicons.org/git/F05032" },
+        { name: "GitHub", icon: "https://cdn.simpleicons.org/github/white" },
+        { name: "VS Code", icon: "https://cdn.simpleicons.org/visualstudiocode/007ACC" },
+        { name: "BeautifulSoup", icon: "https://cdn.simpleicons.org/python/white" },
       ].map((skill) => (
         <div class="relative group">
           <div class="absolute inset-0 -z-10 rounded-lg blur-3xl opacity-0 transition-opacity group-hover:opacity-100" />
@@ -33,7 +32,7 @@
             <img
               src={skill.icon}
               alt={skill.name}
-              class={`w-12 h-12 object-contain ${skill.name === 'GitHub' ? 'invert brightness-200' : ''}`}
+              class="w-12 h-12 object-contain"
               loading="lazy"
             />
             <p class="mt-2 text-white text-lg font-semibold drop-shadow-[1px_1px_0_#B900BC]">{skill.name}</p>
