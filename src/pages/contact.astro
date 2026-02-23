@@ -4,76 +4,87 @@ import MiFoto from "../assets/img/MiFoto.png";
 import CopyMail from "../components/links/copyMail.jsx";
 
 const links = [
-  {
-    href: "https://www.linkedin.com/in/elenapavonfernandez/",
-    label: "LinkedIn",
+  { 
+    href: "https://www.linkedin.com/in/elenapavonfernandez/", 
+    label: "LinkedIn" 
   },
-  { href: "https://github.com/elenapavonfernandez-ui", label: "GitHub" },
-  { href: "mailto:elenapavonfernandez@gmail.com", label: "Email" },
+  { 
+    href: "https://github.com/elenapavonfernandez-ui", 
+    label: "GitHub" 
+  },
+  { 
+    // He añadido un asunto (subject) para que el correo sea más directo
+    href: "mailto:elenapavonfernandez@gmail.com?subject=Contacto desde Portfolio - Data Analyst", 
+    label: "Email" 
+  },
 ];
 ---
 
 <Layout>
   <section
-    class="bg-gray-900 flex min-h-screen flex-col items-center justify-center px-6"
+    class="bg-gray-900 flex min-h-screen flex-col items-center justify-center px-6 py-20"
   >
-    <div class="mb-2 mt-11">
-      <div class="mb-2 mt-11">
-        <div class="relative flex items-center justify-center">
-          <!-- Foto con borde -->
-          <img
-            src={MiFoto.src}
-            alt="Foto de Elena"
-            class="border-primary h-32 w-32 rounded-full shadow-lg"
-          />
+    <div class="mb-8">
+      <div class="relative flex items-center justify-center">
+        <img
+          src={MiFoto.src}
+          alt="Foto de Elena Pavón"
+          class="border-4 border-[#B900BC] h-32 w-32 rounded-full shadow-lg object-cover"
+        />
 
-          <!-- Texto circular alrededor de la foto -->
-          <svg
-            viewBox="0 0 200 200"
-            class="animate-spin-slow absolute h-48 w-48"
-          >
-            <path
-              id="circlePathText"
-              d="M100,100 m-77,0 a77,77 0 1,1 154,0 a77,77 0 1,1 -154,0"
-              fill="none"></path>
-            <text fill="#46d9a9" font-size="18" font-weight="bold">
-              <textPath href="#circlePathText" startOffset="0%">
-                👩‍💻 Hola ! ✦ Estoy disponible para nuevas oportunidades!
-              </textPath>
-            </text>
-          </svg>
-        </div>
+        <svg
+          viewBox="0 0 200 200"
+          class="animate-spin-slow absolute h-48 w-48"
+        >
+          <path
+            id="circlePathText"
+            d="M100,100 m-77,0 a77,77 0 1,1 154,0 a77,77 0 1,1 -154,0"
+            fill="none"></path>
+          <text fill="#00ffab" font-size="16" font-weight="bold" letter-spacing="1">
+            <textPath href="#circlePathText" startOffset="0%">
+              👩‍💻 Hola! ✦ Estoy disponible para nuevas oportunidades! ✦
+            </textPath>
+          </text>
+        </svg>
       </div>
     </div>
 
-    <CopyMail client:visible />
+    <div class="mb-10">
+        <CopyMail client:visible />
+    </div>
 
-    <!-- Lista de Links -->
     <div class="w-full max-w-xl space-y-4">
       {
-        links.map((link) => (
-          <a
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="block font-bold w-full rounded-lg bg-primary hover:bg-secondary drop-shadow-[2px_2px_0_#00ffab] px-6 py-3 text-center text-white transition "
-          >
-            {link.label}
-          </a>
-        ))
+        links.map((link) => {
+          // Detectamos si es email para que no abra pestaña nueva (target="_blank")
+          const isEmail = link.href.startsWith("mailto:");
+          
+          return (
+            <a
+              href={link.href}
+              target={isEmail ? "_self" : "_blank"}
+              rel="noopener noreferrer"
+              class="block font-bold w-full rounded-lg bg-[#B900BC] hover:bg-[#D400D8] drop-shadow-[3px_3px_0_#00ffab] px-6 py-4 text-center text-white transition-all duration-300 transform hover:-translate-y-1"
+            >
+              {link.label}
+            </a>
+          );
+        })
       }
     </div>
   </section>
 </Layout>
 
 <style>
+  /* Animación suave para el texto circular */
   .animate-spin-slow {
-    animation: spin 25s linear infinite;
+    animation: spin 10s linear infinite;
   }
 
   @keyframes spin {
-    100% {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
       transform: rotate(360deg);
     }
-  }
-</style>
