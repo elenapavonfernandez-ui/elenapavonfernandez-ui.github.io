@@ -12,7 +12,7 @@ export const proyectos = [
     imagen: Friends.src,
     tecnologias: ["Power BI", "DAX"],
     codigo: "https://github.com/elenapavonfernandez-ui/friends-PowerBI",
-    categoria: "bi",
+    categoria: "Visualization",
   },
   {
     titulo: "Solar Energy proyect",
@@ -20,7 +20,7 @@ export const proyectos = [
     imagen: solarplant.src,
     tecnologias: ["Python", "Pandas", "Seaborn", "Matplotlib"],
     codigo: "https://github.com/elenapavonfernandez-ui/solar-energy-Python",
-    categoria: "eda",
+    categoria: "EDA", "ETL"
   },
   {
     titulo: "Análisis rotación",
@@ -28,7 +28,7 @@ export const proyectos = [
     imagen: analisisrotacion.src,
     tecnologias: ["Python", "Seaborn", "Matplotlib", "Pandas"],
     codigo: "https://github.com/elenapavonfernandez-ui/analisis-rotacion-Python",
-    categoria: "eda",
+    categoria: "EDA","ETL"
   },
   {
     titulo: "Base de datos Sakila",
@@ -36,7 +36,7 @@ export const proyectos = [
     imagen: Sakila.src,
     tecnologias: ["SQL"],
     codigo: "https://github.com/elenapavonfernandez-ui/videoclub-sakila-SQL",
-    categoria: "eda",
+    categoria: "Data Modeling & SQL"
   },
   {
     titulo: "Análisis Musical",
@@ -44,7 +44,7 @@ export const proyectos = [
     imagen: SpotifyApi.src,
     tecnologias: ["Python", "SQL", "Apis"],
     codigo: "https://github.com/elenapavonfernandez-ui/analisis-musical-APIs-spotify-lastfm",
-    categoria: "extraction",
+    categoria: "EDA","ETL"
   },
   {
     titulo: "Análisis The Simpsons",
@@ -52,6 +52,6 @@ export const proyectos = [
     imagen: TheSimpsons.src,
     tecnologias: ["Python", "Tableau"],
     codigo: "https://github.com/elenapavonfernandez-ui/los-simpson-Tableau",
-    categoria: "eda",
+    categoria: "End-to-end",
   },
 ];
