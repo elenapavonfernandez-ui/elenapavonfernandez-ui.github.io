@@ -1,41 +1,41 @@
 @import "tailwindcss";
 
 .primary {
-  color: #7836cf;
+  color: #c800cc;
 }
 .secondary {
-  color: #512092;
+  color: #6a0d6c;
 }
 .bg-primary {
-  background-color: #7836cf;
+  background-color: #c800cc;
 }
 .bg-secondary {
-  background-color: #512092;
+  background-color: #6a0d6c;
 }
 .text-primary {
-  color: #7836cf;
+  color: #c800cc;
 }
 
 /* reglas hover (usar estas clases directamente) */
 .hover-text-secondary:hover {
-  color: #7836cf;
+  color: #c800cc;
 }
 .hover-bg-secondary:hover {
-  background-color: #7836cf;
+  background-color: #c800cc;
 }
 .hover\:bg-secondary:hover {
-  background-color: #512092;
+  background-color: #e718eb;
 }
 .hover\:text-secondary:hover {
-  color: #512092;
+  color: #6a0d6c;
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 0 #620deb;
+  text-shadow: 2px 2px 0 #e718eb;
 }
 
 .text-shadow-cyan {
-  text-shadow: 2px 2px 0 #0debd8;
+  text-shadow: 2px 2px 0 #00ffab;
 }
 
 /* estilos del home */
@@ -73,5 +73,5 @@
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 0 #6d0deb;
+  text-shadow: 2px 2px 0 #c800cc;
 }
