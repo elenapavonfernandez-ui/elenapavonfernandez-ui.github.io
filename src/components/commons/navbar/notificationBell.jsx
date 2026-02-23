@@ -6,7 +6,7 @@ export default function NotificationBell() {
   const [notifications, setNotifications] = useState([]);
   const containerRef = useRef(null);
 
-  // Notificaciones
+  // 1. Notificaciones actualizadas
   const baseNotifications = [
     { id: 1, text: "Nuevo proyecto publicado 🚀", read: false },
     {
@@ -16,43 +16,33 @@ export default function NotificationBell() {
     },
   ];
 
-  // Obtener el id
-  const lastBaseId =
-    baseNotifications.length > 0
-      ? baseNotifications[baseNotifications.length - 1].id
-      : null;
+  const unreadCount = notifications.filter((n) => !n.read).length;
 
-  // Obtener el id del último elemento no leído
-  const lastUnreadId =
-    notifications.length > 0
-      ? [...notifications].reverse().find((n) => !n.read)?.id
-      : null;
-
-  // Cargar desde localStorage y mezclar con base
+  // 2. Cargar y Sincronizar
   useEffect(() => {
-    const saved = localStorage.getItem("notifications");
-    let merged = baseNotifications;
-
+    const saved = localStorage.getItem("notifications_v2"); // Cambiamos la versión de la key para forzar limpieza
+    
     if (saved) {
       const savedArray = JSON.parse(saved);
-      const savedMap = new Map(savedArray.map((n) => [n.id, n]));
-      merged = baseNotifications.map((n) => savedMap.get(n.id) || n);
+      // Solo mantenemos el estado de "leído" si el texto es el mismo
+      const merged = baseNotifications.map((base) => {
+        const found = savedArray.find((s) => s.id === base.id);
+        return found && found.text === base.text ? found : base;
+      });
+      setNotifications(merged);
+    } else {
+      setNotifications(baseNotifications);
     }
-    setNotifications(merged);
   }, []);
 
-  // localStorage
+  // 3. Guardar en localStorage
   useEffect(() => {
     if (notifications.length > 0) {
-      localStorage.setItem("notifications", JSON.stringify(notifications));
+      localStorage.setItem("notifications_v2", JSON.stringify(notifications));
     }
   }, [notifications]);
 
-  const unread = notifications.filter((n) => !n.read);
-  const read = notifications.filter((n) => n.read);
-  const unreadCount = unread.length;
-
-  // Cerrar dropdown
+  // Cerrar al hacer clic fuera
   useEffect(() => {
     function handleDocClick(e) {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
@@ -63,7 +53,7 @@ export default function NotificationBell() {
     return () => document.removeEventListener("click", handleDocClick);
   }, []);
 
-  // Marca como leidas
+  // Marcar como leídas al abrir
   useEffect(() => {
     if (open && unreadCount > 0) {
       setNotifications((prev) => prev.map((n) => ({ ...n, read: true })));
@@ -74,38 +64,34 @@ export default function NotificationBell() {
     <div ref={containerRef} className="relative">
       <button
         type="button"
-        aria-expanded={open}
-        aria-label="Notificaciones"
         onClick={() => setOpen((v) => !v)}
-        className="relative rounded-full p-2 hover:bg-gray-700"
+        className="relative rounded-full p-2 hover:bg-gray-700 transition-colors"
       >
         <FaBell className="text-2xl text-white cursor-pointer" />
-        {unreadCount > 0 && lastBaseId && (
-          <span className="absolute top-0 right-0 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white">
-            {lastBaseId}
+        {unreadCount > 0 && (
+          <span className="absolute top-0 right-0 inline-flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+            {unreadCount}
           </span>
         )}
       </button>
 
       {open && (
-        <div className="absolute right-0 z-50 mt-2 w-70 max-w-sm rounded-lg border-none bg-gray-900 shadow-lg drop-shadow-[4px_4px_0_#B900BC]">
-          <div className="p-3">
-            <div className="mb-2 flex items-center justify-between">
-              <h4 className="text-xm font-bold text-gray-200 drop-shadow-[1px_1px_0_#B900BC]">
-                Notificaciones
-              </h4>
-            </div>
+        <div className="absolute right-0 z-50 mt-2 w-72 rounded-lg bg-gray-900 shadow-xl border border-gray-800 drop-shadow-[4px_4px_0_#B900BC]">
+          <div className="p-4">
+            <h4 className="mb-3 text-sm font-bold text-gray-200 drop-shadow-[1px_1px_0_#B900BC]">
+              Notificaciones
+            </h4>
 
-            {read.length > 0 ? (
-              <ul className="max-h-48 divide-y divide-gray-800 overflow-auto">
-                {read.map((n) => (
-                  <li key={n.id} className="py-2 text-sm text-gray-400">
-                    {n.text}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-sm text-gray-400">No hay notificaciones.</p>
+            <ul className="max-h-60 divide-y divide-gray-800 overflow-auto custom-scrollbar">
+              {notifications.map((n) => (
+                <li key={n.id} className={`py-3 text-sm ${n.read ? 'text-gray-400' : 'text-white font-medium'}`}>
+                  {n.text}
+                </li>
+              ))}
+            </ul>
+            
+            {notifications.length === 0 && (
+              <p className="text-sm text-gray-500">No hay novedades.</p>
             )}
           </div>
         </div>
