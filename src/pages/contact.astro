@@ -13,17 +13,15 @@ const links = [
     label: "GitHub" 
   },
   { 
-    // He añadido un asunto (subject) para que el correo sea más directo
-    href: "mailto:elenapavonfernandez@gmail.com?subject=Contacto desde Portfolio - Data Analyst", 
+    href: "mailto:elenapavonfernandez@gmail.com?subject=Contacto desde Portfolio", 
     label: "Email" 
   },
 ];
 ---
 
 <Layout>
-  <section
-    class="bg-gray-900 flex min-h-screen flex-col items-center justify-center px-6 py-20"
-  >
+  <section class="bg-gray-900 flex min-h-screen flex-col items-center justify-center px-6 py-20">
+    
     <div class="mb-8">
       <div class="relative flex items-center justify-center">
         <img
@@ -31,16 +29,9 @@ const links = [
           alt="Foto de Elena Pavón"
           class="border-4 border-[#B900BC] h-32 w-32 rounded-full shadow-lg object-cover"
         />
-
-        <svg
-          viewBox="0 0 200 200"
-          class="animate-spin-slow absolute h-48 w-48"
-        >
-          <path
-            id="circlePathText"
-            d="M100,100 m-77,0 a77,77 0 1,1 154,0 a77,77 0 1,1 -154,0"
-            fill="none"></path>
-          <text fill="#00ffab" font-size="16" font-weight="bold" letter-spacing="1">
+        <svg viewBox="0 0 200 200" class="animate-spin-slow absolute h-48 w-48">
+          <path id="circlePathText" d="M100,100 m-77,0 a77,77 0 1,1 154,0 a77,77 0 1,1 -154,0" fill="none"></path>
+          <text fill="#00ffab" font-size="16" font-weight="bold">
             <textPath href="#circlePathText" startOffset="0%">
               👩‍💻 Hola! ✦ Estoy disponible para nuevas oportunidades! ✦
             </textPath>
@@ -50,41 +41,34 @@ const links = [
     </div>
 
     <div class="mb-10">
-        <CopyMail client:visible />
+      <CopyMail client:visible />
     </div>
 
     <div class="w-full max-w-xl space-y-4">
       {
-        links.map((link) => {
-          // Detectamos si es email para que no abra pestaña nueva (target="_blank")
-          const isEmail = link.href.startsWith("mailto:");
-          
-          return (
-            <a
-              href={link.href}
-              target={isEmail ? "_self" : "_blank"}
-              rel="noopener noreferrer"
-              class="block font-bold w-full rounded-lg bg-[#B900BC] hover:bg-[#D400D8] drop-shadow-[3px_3px_0_#00ffab] px-6 py-4 text-center text-white transition-all duration-300 transform hover:-translate-y-1"
-            >
-              {link.label}
-            </a>
-          );
-        })
+        links.map((link) => (
+          <a
+            href={link.href}
+            /* Si es mailto, usamos una función de JS para asegurar la apertura */
+            onclick={link.href.startsWith('mailto:') ? `window.location.href='${link.href}'; return false;` : undefined}
+            target={link.href.startsWith('mailto:') ? "_self" : "_blank"}
+            rel="noopener noreferrer"
+            class="block font-bold w-full rounded-lg bg-[#B900BC] hover:bg-[#D400D8] drop-shadow-[3px_3px_0_#00ffab] px-6 py-4 text-center text-white transition-all duration-300 transform hover:-translate-y-1"
+          >
+            {link.label}
+          </a>
+        ))
       }
     </div>
   </section>
 </Layout>
 
 <style>
-  /* Animación suave para el texto circular */
   .animate-spin-slow {
-    animation: spin 10s linear infinite;
+    animation: spin 12s linear infinite;
   }
-
   @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
