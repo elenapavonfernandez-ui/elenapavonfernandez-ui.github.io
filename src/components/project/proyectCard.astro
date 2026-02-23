@@ -1,18 +1,17 @@
-----
+---
 import { HiArrowRight } from "react-icons/hi";
 
-export interface Props {
+interface Props {
   titulo: string;
   descripcion: string;
   imagen: string;
   tecnologias: string[];
   codigo: string;
   categoria?: string;
-  index: number; 
+  index: number;
 }
 
-const { titulo, descripcion, imagen, tecnologias, codigo, categoria, index } =
-  Astro.props;
+const { titulo, descripcion, imagen, tecnologias, codigo, categoria, index } = Astro.props;
 ---
 
 <div
@@ -22,7 +21,7 @@ const { titulo, descripcion, imagen, tecnologias, codigo, categoria, index } =
 >
   <img
     src={imagen}
-    alt={`Imagen del proyecto ${titulo}`}
+    alt={titulo}
     class="h-52 w-full rounded-2xl object-cover p-3"
   />
 
@@ -41,7 +40,7 @@ const { titulo, descripcion, imagen, tecnologias, codigo, categoria, index } =
       }
     </div>
 
-    <p class="mb-4 text-sm leading-relaxed text-gray-400">
+    <p class="mb-4 text-sm leading-relaxed text-gray-400 line-clamp-3">
       {descripcion}
     </p>
 
