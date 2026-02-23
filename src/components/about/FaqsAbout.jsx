@@ -1,36 +1,32 @@
 import React, { useState } from "react";
 
+// 1. Iconos actualizados para que coincidan EXACTAMENTE con las llaves de 'skills'
 const CategoryIcons = {
-  "Web Development": (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="text-primary h-6 w-6 opacity-70"
-    >
-      <path d="M21 3C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21ZM20 11H4V19H20V11ZM20 5H4V9H20V5ZM11 6V8H9V6H11ZM7 6V8H5V6H7Z"></path>
+  "¿Qué tecnologías uso?": (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFAB" className="h-6 w-6 opacity-80">
+      <path d="M5 3H19C19.5523 3 20 3.44772 20 4V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V4C4 3.44772 4.44772 3 5 3ZM12 13L16 9H8L12 13Z"></path>
     </svg>
   ),
-  "Mobile Development": (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="text-primary h-6 w-6 opacity-70"
-    >
-      <path d="M7 4V20H17V4H7ZM6 2H18C18.5523 2 19 2.44772 19 3V21C19 21.5523 18.5523 22 18 22H6C5.44772 22 5 21.5523 5 21V3C5 2.44772 5.44772 2 6 2ZM12 17C12.5523 17 13 17.4477 13 18C13 18.5523 12.5523 19 12 19C11.4477 19 11 18.5523 11 18C11 17.4477 11.4477 17 12 17Z"></path>
+  "Mi Experiencia": (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFAB" className="h-6 w-6 opacity-80">
+      <path d="M7 5V2H17V5H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V5H7ZM9 4V5H15V4H9ZM4 7V19H20V7H4Z"></path>
     </svg>
   ),
-  "UI/UX Design & Prototyping": (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className="text-primary h-6 w-6 opacity-70"
-    >
-      <path d="M5.7646 7.99998L5.46944 7.26944C5.26255 6.75737 5.50995 6.17454 6.02202 5.96765L15.2939 2.22158C15.8059 2.01469 16.3888 2.26209 16.5956 2.77416L22.2147 16.6819C22.4216 17.194 22.1742 17.7768 21.6622 17.9837L12.3903 21.7298C11.8783 21.9367 11.2954 21.6893 11.0885 21.1772L11.0002 20.9586V21H7.00021C6.44792 21 6.00021 20.5523 6.00021 20V19.7303L2.65056 18.377C2.13849 18.1701 1.89109 17.5873 2.09798 17.0752L5.7646 7.99998ZM8.00021 19H10.2089L8.00021 13.5333V19ZM6.00021 12.7558L4.32696 16.8972L6.00021 17.6084V12.7558ZM7.69842 7.44741L12.5683 19.5008L19.9858 16.5039L15.1159 4.45055L7.69842 7.44741ZM10.6766 9.47974C10.1645 9.68663 9.5817 9.43924 9.37481 8.92717C9.16792 8.4151 9.41532 7.83227 9.92739 7.62538C10.4395 7.41849 11.0223 7.66588 11.2292 8.17795C11.4361 8.69002 11.1887 9.27286 10.6766 9.47974Z"></path>
+  "Mi formacion": (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFAB" className="h-6 w-6 opacity-80">
+      <path d="M12 2L1 7L12 12L23 7L12 2ZM12 15.5L4.5 12.09V14.09L12 17.5L19.5 14.09V12.09L12 15.5Z"></path>
     </svg>
   ),
+  "¿Cómo trabajo en equipo?": (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFAB" className="h-6 w-6 opacity-80">
+      <path d="M13 14.0622V22H11V14.0622C7.05369 13.5601 4 10.1362 4 6V5H6V6C6 9.31371 8.68629 12 12 12C15.3137 12 18 9.31371 18 6V5H20V6C20 10.1362 16.9463 13.5601 13 14.0622Z"></path>
+    </svg>
+  ),
+  "Metodolgias Agiles": (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFAB" className="h-6 w-6 opacity-80">
+      <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM13 12H17V10H13V7H11V10H7V12H11V17H13V12Z"></path>
+    </svg>
+  )
 };
 
 const SkillsList = () => {
@@ -44,13 +40,13 @@ const SkillsList = () => {
       "Tengo experiencia trabajando en startups y en equipos multidisciplinares, recopilando y extrayendo datos y analizándonos para tomar decisiones estratégicas.",
     ],
     "Mi formacion": [
-      "Graduada en Periodismo y Técnico Superior en Realización Audiovisual. Posteriormente, me he especializado como Data Analyst mediante un bootcamp intensivo de Data Analytics & IA de 638 horas. Además, cuento con diversos cursos y capacitaciones en el ámbito del Marketing Digital y las Nuevas Tecnologías. Tambien, complemento mi formación aprendizaje autodidacta para seguir siempre a la vanguardia de las novedades tecnológicas.",
+      "Graduada en Periodismo y Técnico Superior en Realización Audiovisual. Especializada como Data Analyst mediante un bootcamp intensivo de 638 horas. Aprendizaje continuo y autodidacta.",
     ],
     "¿Cómo trabajo en equipo?": [
-      "Tengo experiencia en equipos multidisciplinares, donde he trabajado codo con codo con equipos técnicos y no técnicos. Para ello, utilizo metodologías ágiles como Scrum, además de herramientas de control de versiones como Git y GitHub para gestionar el flujo de trabajo. También cuento con experiencia en el uso de herramientas de gestión de proyectos como Notion y herramientas de gestión documental y colaborativas como Sharepoint.",
+      "Experiencia en equipos multidisciplinares bajo metodologías ágiles (Scrum). Control de versiones con Git/GitHub y gestión con Notion/Sharepoint.",
     ],
     "Metodolgias Agiles": [
-      "He trabajado con metodologías ágiles como Scrum. En Scrum, participé en sprints de semanales, donde realizaba una presentación de mi trabajo semanal a todo el equipo. También he trabajado con Microsoft Planner (diseño tipo Kanban), utilizando tableros para gestionar tareas y moverlas según su estado de progreso. Además, participé en reuniones departamenales de apertura y cierre de semana para establecer KPIs y revisar el cumplimiento de las mismas, asegurando una comunicación eficiente dentro del equipo.",
+      "Participación en Sprints semanales, gestión de tableros Kanban (Microsoft Planner) y establecimiento de KPIs departamentales.",
     ],
   };
 
@@ -60,31 +56,33 @@ const SkillsList = () => {
 
   return (
     <div className="flex flex-col items-center text-left mx-auto max-w-6xl px-4">
-      <div className="site-container mt-10">
-        <h2 class="text-4xl font-bold flex flex-col items-center gap-6 text-center whitespace-nowrap text-white md:flex-row md:items-center md:text-end">
-          <span class="hidden h-1.5 grow rounded-lg drop-shadow-[2px_2px_0_#0debd8] bg-[#7836cf] md:block"></span>
-          <span class="drop-shadow-[2px_2px_0_#7836cf]">Mas Sobre Mi</span>
+      <div className="site-container mt-10 w-full">
+        {/* Título con tus colores: Magenta y sombra Verde */}
+        <h2 className="text-4xl font-bold flex flex-col items-center gap-6 text-center text-white md:flex-row md:items-center md:text-end">
+          <span className="hidden h-1.5 grow rounded-lg bg-[#B900BC] drop-shadow-[2px_2px_0_#00FFAB] md:block"></span>
+          <span className="drop-shadow-[2px_2px_0_#B900BC]">Más Sobre Mí</span>
         </h2>
-        <ul className="mt-4 space-y-4 text-lg">
+
+        <ul className="mt-8 space-y-4 text-lg">
           {Object.entries(skills).map(([category, items]) => (
             <li key={category} className="w-full">
               <div
                 onClick={() => toggleItem(category)}
-                className="bg-gray-900 hover:bg-opacity-80 w-full cursor-pointer overflow-hidden rounded-2xl text-left transition-all drop-shadow-[2px_2px_0_#7836cf]"
+                className="bg-gray-900 hover:bg-gray-800 w-full cursor-pointer overflow-hidden rounded-2xl text-left transition-all border border-white/5 drop-shadow-[3px_3px_0_#B900BC]"
               >
-                <div className="flex items-center gap-3 p-4">
+                <div className="flex items-center gap-4 p-5">
+                  {/* Aquí se renderiza el icono si coincide la llave */}
                   {CategoryIcons[category]}
+                  
                   <div className="flex grow items-center justify-between gap-2">
-                    <div className="max-w-[200px] min-w-0 overflow-hidden md:max-w-none">
-                      <span className="block truncate text-lg text-white drop-shadow-[1px_1px_0_#7836cf] font-bold">
-                        {category}
-                      </span>
-                    </div>
+                    <span className="block text-lg text-white font-bold tracking-wide">
+                      {category}
+                    </span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className={`h-6 w-6 shrink-0 transform text-[#6a2cbb] transition-transform ${
+                      fill="#B900BC"
+                      className={`h-7 w-7 transform transition-transform duration-300 ${
                         openItem === category ? "rotate-180" : ""
                       }`}
                     >
@@ -94,13 +92,15 @@ const SkillsList = () => {
                 </div>
 
                 <div
-                  className={`px-4 transition-all duration-300 ${
+                  className={`px-5 transition-all duration-500 ease-in-out ${
                     openItem === category
-                      ? "max-h-[500px] pb-4 opacity-100"
+                      ? "max-h-[500px] pb-6 opacity-100"
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="text-[0.8em] text-white">{skills[category]}</p>
+                  <p className="text-gray-300 leading-relaxed border-t border-white/10 pt-4">
+                    {items[0]}
+                  </p>
                 </div>
               </div>
             </li>
@@ -110,4 +110,5 @@ const SkillsList = () => {
     </div>
   );
 };
+
 export default SkillsList;
