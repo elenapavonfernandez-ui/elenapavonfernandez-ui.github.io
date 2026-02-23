@@ -20,7 +20,7 @@ export const proyectos = [
     imagen: solarplant.src,
     tecnologias: ["Python", "Pandas", "Seaborn", "Matplotlib"],
     codigo: "https://github.com/elenapavonfernandez-ui/solar-energy-Python",
-    categoria: "EDA", "ETL"
+    categoria: "EDA", "ETL",
   },
   {
     titulo: "Análisis rotación",
@@ -28,7 +28,7 @@ export const proyectos = [
     imagen: analisisrotacion.src,
     tecnologias: ["Python", "Seaborn", "Matplotlib", "Pandas"],
     codigo: "https://github.com/elenapavonfernandez-ui/analisis-rotacion-Python",
-    categoria: "EDA","ETL"
+    categoria: "EDA","ETL",
   },
   {
     titulo: "Base de datos Sakila",
@@ -44,7 +44,7 @@ export const proyectos = [
     imagen: SpotifyApi.src,
     tecnologias: ["Python", "SQL", "Apis"],
     codigo: "https://github.com/elenapavonfernandez-ui/analisis-musical-APIs-spotify-lastfm",
-    categoria: "EDA","ETL"
+    categoria: "EDA","ETL",
   },
   {
     titulo: "Análisis The Simpsons",
