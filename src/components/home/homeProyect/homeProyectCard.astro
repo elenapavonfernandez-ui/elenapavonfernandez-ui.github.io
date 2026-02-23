@@ -1,19 +1,16 @@
 ---
-import { HiArrowRight } from "react-icons/hi";
-
 export interface Props {
   titulo: string;
   imagen: string;
   tecnologias: string[];
-  demo: string;
   codigo: string;
 }
 
-const { titulo, imagen, tecnologias, demo, codigo } = Astro.props;
+const { titulo, imagen, tecnologias, codigo } = Astro.props;
 ---
 
 <div
-  class="group flex w-full max-w-md mx-auto flex-col overflow-hidden rounded-xl bg-gray-900 border border-none transition-all hover:scale-[1.015] drop-shadow-[4px_4px_0_#7836cf]"
+  class="group flex w-full max-w-md mx-auto flex-col overflow-hidden rounded-xl bg-gray-900 border border-white/5 transition-all hover:scale-[1.015] drop-shadow-[4px_4px_0_#B900BC]"
 >
   <img
     src={imagen}
@@ -22,35 +19,28 @@ const { titulo, imagen, tecnologias, demo, codigo } = Astro.props;
   />
 
   <div class="flex flex-col grow p-3">
-    <h3 class="text-lg font-semibold mb-2 text-white drop-shadow-[1px_1px_0_#7836cf]">{titulo}</h3>
+    <h3 class="text-lg font-semibold mb-2 text-white drop-shadow-[1px_1px_0_#B900BC]">
+      {titulo}
+    </h3>
 
     <div class="flex flex-wrap gap-2 mb-4">
       {
         tecnologias.map((tech) => (
-          <span class="rounded-md bg-[#7836cf]/20 text-[#a27ed1] px-2 py-0.5 text-xs font-semibold">
+          <span class="rounded-md bg-[#00FFAB]/10 text-[#00FFAB] px-2 py-0.5 text-xs font-semibold border border-[#00FFAB]/20">
             {tech}
           </span>
         ))
       }
     </div>
 
-    <div class="mt-auto flex justify-between gap-3">
-      <a
-        href={demo}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-full text-center border border-[#7836cf] text-[#7836cf] py-1.5 rounded-md text-sm font-semibold hover:bg-[#7836cf] hover:text-gray-900 transition-colors"
-      >
-        Demo
-      </a>
-
+    <div class="mt-auto">
       <a
         href={codigo}
         target="_blank"
         rel="noopener noreferrer"
-        class="w-full text-center border border-[#7836cf] text-[#7836cf] py-1.5 rounded-md text-sm font-semibold hover:bg-[#7836cf] hover:text-gray-900 transition-colors"
+        class="block w-full text-center border border-[#B900BC] text-[#B900BC] py-2 rounded-md text-sm font-bold hover:bg-[#B900BC] hover:text-white transition-all duration-300"
       >
-        Código
+        Ver Análisis en GitHub
       </a>
     </div>
   </div>
