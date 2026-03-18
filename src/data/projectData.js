@@ -15,7 +15,7 @@ export const proyectos = [
     categoria: "Visualization",
   },
   {
-    titulo: "Solar Energy proyect",
+    titulo: "Solar Energy project",
     descripcion: "Solar energy EDA and data cleaning & visualization project. Compares the efficiency of two solar plants using Python, Pandas, Seaborn and Matplotlib",
     imagen: solarplant.src,
     tecnologias: ["Python", "Pandas", "Seaborn", "Matplotlib"],
