@@ -11,7 +11,7 @@ export default function NotificationBell() {
     { id: 1, text: "Nuevo proyecto publicado 🚀", read: false },
     {
       id: 2,
-      text: "Hey como va?, te comento que actualmente estoy formándome en sistemas Cloud",
+      text: "Hey como va?, te comento que actualmente estoy formándome en AWS",
       read: false,
     },
   ];
