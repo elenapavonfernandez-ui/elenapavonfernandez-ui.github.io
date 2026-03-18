@@ -27,7 +27,7 @@ export const proyectos = [
     descripcion: "Análisis de los motivos de rotación dentro de una empresa. EDA, limpieza y visualización con Seaborn y Matplotlib",
     imagen: analisisrotacion.src,
     tecnologias: ["Python", "Seaborn", "Matplotlib", "Pandas"],
-    codigo: "https://github.com/elenapavonfernandez-ui/analisis-rotacion-Python",
+    codigo: "https://github.com/elenapavonfernandez-ui/analisis-rotacion-empresa-Python-PoweBI",
     categoria: "EDA & ETL",
   },
   {
